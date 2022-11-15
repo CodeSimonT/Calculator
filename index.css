@@ -1,0 +1,88 @@
+:root {
+    --border-color: rgba(0, 0, 0, .5);
+    --align: center;
+    --justify: center;
+    --display: flex;
+    --border-width: 1px;
+    --border-style: solid;
+    
+}
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: sans-serif;
+    font-size: 1.3rem;
+}
+#head {
+    width: 100%;
+    min-height: 100vh;
+    background-color: skyblue;
+}
+#head .container {
+    min-height: 100vh;
+    display: var(--display);
+    justify-content: var(--justify);
+    align-items: var(--align);
+}
+#head .container .item {
+    background-color: black;
+    color: white;
+    display: var(--display);
+    justify-content: var(--justify);
+    align-items: var(--align);
+    flex-direction: column;
+    width: 280px;
+    border-radius: 10px;
+}
+#head .container .input {
+    width: 100%;
+    height: 70px;
+    padding: 2px 10px;
+    text-align: right;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+#head .container .output {
+    width: 100%;
+    height: 70px;
+    padding: 20px 10px;
+    text-align: right;
+
+}
+#head .container .body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 10px;
+}
+#head .container .body .operator {
+    background-color: orange;
+}
+#head .container .body .initial {
+    background-color: yellowgreen;
+}
+#head .container .body .number {
+    background-color: grey;
+}
+#head .container .body .button {
+    display: var(--display);
+    justify-content: var(--justify);
+    align-items: var(--align);
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 50%;
+    transition: all .2s linear;
+}
+#head .container .body .button:hover {
+    background-color: rgba(0, 0, 0, .3);
+}
